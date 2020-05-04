@@ -15,6 +15,11 @@
         redirect_to action: :index
     end
 
+    #詳細情報を表示するためのアクション
+    def show
+        @user = User.find(params[:id])
+    end
+
     #編集画面に対応するアクション
     def edit
         @user = User.find(params[:id])
